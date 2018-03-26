@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { setCategories, pickCategory } from '../actions';
 import Category from './Category';
 
-class App extends Component {
+export class App extends Component {
   componentDidMount() {
     if (this.props.categories.length === 0) {
       fetch('http://jservice.io/api/categories?count=20')
