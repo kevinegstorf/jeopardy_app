@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Clue extends Component {
+export class Clue extends Component {
   constructor() {
     super();
   
@@ -12,12 +12,12 @@ class Clue extends Component {
 
     return (
       <div onClick={()=> this.setState({ reveal: true })}>
-        <h4>{ value || 'unkown' }</h4>
+        <h4>{ value || 'unknown' }</h4>
         <hr />
-        <h5> { question }</h5>
+        <h5>{ question }</h5>
         <hr />
         <h5 className={ this.state.reveal ? 'text-revealed' :  'text-hidden'}>
-        { answer }
+          { answer }
         </h5>
       </div>
     )
